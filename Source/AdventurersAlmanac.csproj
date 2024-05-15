@@ -10,9 +10,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.20.0" />
+        <PackageReference Include="Colorful.Console" Version="1.2.15" />
         <PackageReference Include="FastEndpoints" Version="5.25.0" />
         <PackageReference Include="FastEndpoints.Security" Version="5.25.0" />
-        <PackageReference Include="FastEndpoints.Swagger" Version="5.23.0" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="5.25.0" />
     </ItemGroup>
 
 </Project>

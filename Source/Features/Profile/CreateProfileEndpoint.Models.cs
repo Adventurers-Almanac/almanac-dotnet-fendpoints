@@ -10,7 +10,7 @@ sealed class CreateProfileRequest
 
     public required DateTime Birthdate { get; set; }
 
-    public IFormFile ProfilePicture { get; set; }
+    public string ProfileImageBase64 { get; set; }
 }
 
 sealed class Validator : Validator<CreateProfileRequest>
@@ -23,5 +23,5 @@ sealed class Validator : Validator<CreateProfileRequest>
 
 sealed class CreateProfileResponse
 {
-    public string Message => "This endpoint hasn't been implemented yet!";
+    public string Result { get; set; }
 }

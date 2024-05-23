@@ -7,12 +7,13 @@ pipeline {
                 echo 'Hello from ALMANAC-DOTNET-FEDENDPOINTS jenkinsfile!'
             }
         }
-    }
 
-    stage('Build Docker Image') {
-        steps {
-            sh 'docker build --tag acradvalmanacdevwus2.azurecr.io/dotnet/almanac-dotnet-fendpoints:$BUILD_NUMBER .'
-            sh 'docker image rm acradvalmanacdevwus2.azurecr.io/dotnet/almanac-dotnet-fendpoints:$BUILD_NUMBER'
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build --tag acradvalmanacdevwus2.azurecr.io/dotnet/almanac-dotnet-fendpoints:$BUILD_NUMBER .'
+                sh 'docker image rm acradvalmanacdevwus2.azurecr.io/dotnet/almanac-dotnet-fendpoints:$BUILD_NUMBER'
+            }
         }
     }
+
 }
